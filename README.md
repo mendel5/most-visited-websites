@@ -25,4 +25,7 @@ prints websites without protocol (e.g. https)
 cat websites-001.txt | cut -d'/' -f3
 prints websites without protocol (e.g. https)
 
+cat websites-001.txt | cut -d'/' -f1,2,3
+prints websites with protocol (e.g. https)
+
 ```
