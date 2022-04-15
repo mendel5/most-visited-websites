@@ -22,6 +22,7 @@ sort random-001.txt | uniq -c | sort -nr
 cat websites-001.txt | awk -F[/:] '{print $4}'
 prints websites without protocol (e.g. https)
 
-
+cat websites-001.txt | cut -d'/' -f3
+prints websites without protocol (e.g. https)
 
 ```
