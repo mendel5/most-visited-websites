@@ -19,5 +19,9 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 sort random-001.txt | uniq -c | sort -nr
 
+cat websites-001.txt | awk -F[/:] '{print $4}'
+prints websites without protocol (e.g. https)
+
+
 
 ```
