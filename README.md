@@ -17,6 +17,10 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 ```
 
+cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr
+
+--
+
 sort random-001.txt | uniq -cd | sort -nr
 
 cat websites-001.txt | cut -d'/' -f1,2,3
