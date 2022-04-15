@@ -12,3 +12,12 @@ How to get a list of the most visited websites when using Mozilla Firefox
 - https://stackoverflow.com/questions/2497215/how-to-extract-domain-name-from-url
 - https://www.cyberciti.biz/faq/get-extract-domain-name-from-url-in-linux-unix-bash/
 - https://stackoverflow.com/questions/6712437/find-duplicate-lines-in-a-file-and-count-how-many-time-each-line-was-duplicated
+
+## Code
+
+```
+
+sort random-001.txt | uniq -c | sort -nr
+
+
+```
