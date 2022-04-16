@@ -21,6 +21,7 @@ cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-wi
 # https://en.wikipedia.org
 
 cat websites-02.txt | cut -d'/' -f3 | grep -iv "www" | grep -e "\..*\." | sort | uniq -cd | sort -nr
+cat websites-02.txt | cut -d'/' -f3 | grep -ive "www\." | grep -e "\..*\." | sort | uniq -cd | sort -nr
 # return domain names (no protocol) that have a subdomain and this subdomain is not "www"
 ```
 
