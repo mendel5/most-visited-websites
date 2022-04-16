@@ -7,7 +7,7 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 ```
 cat FILE | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites-no-protocol.txt
-# Domain names only
+# Domain names only (no protocol)
 # Example:
 # https://en.wikipedia.org/wiki/Linux
 # is returned as
@@ -21,7 +21,7 @@ cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-wi
 # https://en.wikipedia.org
 
 cat FILE | cut -d'/' -f3 | grep -ive "www\." | grep -e "\..*\." | sort | uniq -cd | sort -nr
-# return domain names (no protocol) that have a subdomain and this subdomain is not "www."
+# Domain names (no protocol) that have a subdomain and this subdomain is not "www."
 ```
 
 ## Links
