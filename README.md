@@ -21,22 +21,6 @@ cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-wi
 # https://en.wikipedia.org
 ```
 
-```
-sort random-001.txt | uniq -cd | sort -nr
-
-cat websites-001.txt | cut -d'/' -f1,2,3
-prints websites with protocol (e.g. https)
-
---
-
-cat websites-001.txt | awk -F[/:] '{print $4}'
-prints websites without protocol (e.g. https)
-
-cat websites-001.txt | cut -d'/' -f3
-prints websites without protocol (e.g. https)
-
-```
-
 ## Links
 - https://www.ghacks.net/2020/06/08/how-to-display-most-visited-pages-in-firefoxs-address-bar/
 - https://support.mozilla.org/en-US/questions/1195457
