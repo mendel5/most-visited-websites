@@ -6,14 +6,14 @@ How to get a list of the most visited websites when using Mozilla Firefox
 - Copy the full browser history and paste it to a .txt file
 
 ```
-cat FILE | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites.txt
+cat FILE | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites-no-protocol.txt
 # Domain names only
 # Example:
 # https://en.wikipedia.org/wiki/Linux
 # is returned as
 # en.wikipedia.org
 
-cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites.txt
+cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-with-protocol.txt
 # Domain names including protocol
 # Example:
 # https://en.wikipedia.org/wiki/Linux
