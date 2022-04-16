@@ -1,11 +1,6 @@
 # most-visited-websites
 How to get a list of the most visited websites when using Mozilla Firefox
 
-++ Work in Progress ++
-
-## Notes
-- Copy the full history and paste it to a .txt file
-
 ## Links
 - https://www.ghacks.net/2020/06/08/how-to-display-most-visited-pages-in-firefoxs-address-bar/
 - https://support.mozilla.org/en-US/questions/1195457
@@ -15,9 +10,11 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 ## Code
 
+- Copy the full browser history and paste it to a .txt file
+
 ```
 
-cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr
+cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites.txt
 
 --
 
