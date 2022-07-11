@@ -3,24 +3,24 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 ## Code
 
-- Copy the full browser history and paste it to a .txt file
+- Copy the full browser history from Mozilla Firefox (`Ctrl` + `Shift` + `H`) and paste it to a .txt file, e.g. `my_history.txt`
 
 ```
-cat FILE | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites-no-protocol.txt
+cat my_history.txt | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites-no-protocol.txt
 # Domain names only (no protocol)
 # Example:
 # https://en.wikipedia.org/wiki/Linux
 # is returned as
 # en.wikipedia.org
 
-cat FILE | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-with-protocol.txt
+cat my_history.txt | cut -d'/' -f1,2,3 | sort | uniq -cd | sort -nr > ./ranked-websites-with-protocol.txt
 # Domain names including protocol
 # Example:
 # https://en.wikipedia.org/wiki/Linux
 # is returned as
 # https://en.wikipedia.org
 
-cat FILE | cut -d'/' -f3 | grep -ive "www\." | grep -e "\..*\." | sort | uniq -cd | sort -nr
+cat my_history.txt | cut -d'/' -f3 | grep -ive "www\." | grep -e "\..*\." | sort | uniq -cd | sort -nr
 # Domain names (no protocol) that have a subdomain and this subdomain is not "www."
 ```
 
