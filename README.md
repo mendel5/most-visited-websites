@@ -3,7 +3,8 @@ How to get a list of the most visited websites when using Mozilla Firefox
 
 ## Code
 
-- Copy the full browser history from Mozilla Firefox (`Ctrl` + `Shift` + `H`) and paste it to a .txt file, e.g. `my_history.txt`
+- Open the browsing history in Mozilla Firefox by pressing `Ctrl` + `Shift` + `H`
+- Copy the full history from Mozilla Firefox and paste it to a .txt file, e.g. `my_history.txt`
 
 ```
 cat my_history.txt | cut -d'/' -f3 | sort | uniq -cd | sort -nr > ./ranked-websites-no-protocol.txt
