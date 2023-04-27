@@ -4,7 +4,8 @@ How to get a list of the most visited websites when using Mozilla Firefox
 ## Code
 
 - Open the browsing history in Mozilla Firefox by pressing `Ctrl` + `Shift` + `H`
-- Copy the full history from Mozilla Firefox and paste it to a .txt file, e.g. `my_history.txt`
+- Select the full history of Mozilla Firefox by pressing `Ctrl` + `A`, copy it with `Ctrl` + `C` and paste it to a .txt file, e.g. `my_history.txt`, with `Ctrl` + `V`
+- Make sure to get the full history, not just the past 7 days or so
 - Use one of the following commands on a GNU/Linux system:
 
 ```
